@@ -27,14 +27,12 @@ install_qemu:
 
 install_ghidra:
 	echo ***** Download Ghidra
-	wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.1.4_build/ghidra_10.1.4_PUBLIC_20220519.zip  -O ghidra.zip
+	wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4.2_build/ghidra_11.4.2_PUBLIC_20250826.zip  -O ghidra.zip
 	unzip ghidra.zip
 	rm ghidra.zip
-	mv ghidra_10.1.4_PUBLIC ghidra
+	mv ghidra_11.4.2_PUBLIC ghidra
 	echo ***** Install Ghidra Bridge
 	python3 -m ghidra_bridge.install_server ~/ghidra_scripts
-	cd ghidra/Ghidra/Processors && git clone https://github.com/Ebiroll/ghidra-xtensa Xtensa && \
-	cd Xtensa && make
 
 install_libFuzzerMutator:
 	echo '***** Download libFuzzer Mutator (AFL++ git repo stores libFuzzer Mutator code)'
