@@ -22,8 +22,7 @@ install_qemu:
 	echo ***** Clone qemu
 	git clone --depth 1 -j8 --branch v5.2.0 https://github.com/qemu/qemu.git
 	echo ***** Install qemu
-	cd qemu && mkdir build && cd build && ../configure --disable-system --target-list=x86_64-linux-user,arm-linux-user,armeb-linux-user --enable-plugins && make -j4
-
+	cd qemu && mkdir build && cd build && ../configure --disable-werror --disable-system --target-list=x86_64-linux-user,arm-linux-user,armeb-linux-user --enable-plugins && make -j4
 
 install_ghidra:
 	echo ***** Download Ghidra

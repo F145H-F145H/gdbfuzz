@@ -29,9 +29,9 @@ GDBFuzz enables coverage-guided fuzzing for embedded systems, but - for evaluati
 
 ## Install local
 __GDBFuzz__ has been tested on Ubuntu 20.04 LTS and Raspberry Pie OS 32-bit.
-Prerequisites are java and python3. First, create a new virtual environment and install all dependencies.
+Prerequisites are java and python3 (python3.10 is recommended). First, create a new virtual environment and install all dependencies.
 ~~~
-virtualenv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 make
 chmod a+x ./src/GDBFuzz/main.py
